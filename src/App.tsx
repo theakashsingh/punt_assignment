@@ -1,7 +1,8 @@
 // App.tsx
+import "./App.css"
 import React, { useState, useEffect } from "react";
 import FontSelector from "./FontSelector";
-import { FontData, getFontVariants, getClosestVariant } from "./fontData";
+import {getFontVariants, getClosestVariant } from "./fontData";
 
 const App: React.FC = () => {
   const [text, setText] = useState<string>("");
@@ -60,8 +61,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div className="main">
+      <div className="selector_wrapper">
         <FontSelector
           selectedFont={selectedFont}
           onFontChange={handleFontChange}
@@ -78,7 +79,7 @@ const App: React.FC = () => {
           fontStyle: italic ? "italic" : "normal",
         }}
       />
-      <div>
+      <div className="save_reset_wrapper">
         <button onClick={handleSave}>Save</button>
         <button onClick={handleReset}>Reset</button>
       </div>

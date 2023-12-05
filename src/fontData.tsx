@@ -1,3 +1,5 @@
+import fontData from "../public/data.json"
+
 // fontData.ts
 export interface FontVariant {
   weight: string;
@@ -10,38 +12,8 @@ export interface FontData {
   };
 }
 
-// export const getFontData = async (): Promise<FontData> => {
-//   try {
-//     const response = await fetch("/data.json"); // Adjust the path to your JSON file
-//     const data = await response.json();
-//     return data;
-//   } catch (error) {
-//     console.error("Error fetching font data:", error);
-//     throw error;
-//   }
-// };
-
 export const FontData: FontData = {
-  "ABeeZee": {
-    "400": "https://fonts.gstatic.com/s/abeezee/v22/esDR31xSG-6AGleN2tWkkJUEGpA.woff2",
-    "400italic": "https://fonts.gstatic.com/s/abeezee/v22/esDT31xSG-6AGleN2tCUkp8DOJKuGA.woff2",
-  },
-  "Abel": {
-    "400": "https://fonts.gstatic.com/s/abel/v18/MwQ5bhbm2POE2V9BPbh5uGM.woff2"
-  },
-  "Abhaya Libre": {
-    "400": "https://fonts.gstatic.com/s/abhayalibre/v14/e3tmeuGtX-Co5MNzeAOqinEQfEnXgPRE4g.woff2",
-    "500": "https://fonts.gstatic.com/s/abhayalibre/v14/e3t5euGtX-Co5MNzeAOqinEYj2rCrdZJyIU9BQ.woff2",
-    "600": "https://fonts.gstatic.com/s/abhayalibre/v14/e3t5euGtX-Co5MNzeAOqinEYo23CrdZJyIU9BQ.woff2",
-    "700": "https://fonts.gstatic.com/s/abhayalibre/v14/e3t5euGtX-Co5MNzeAOqinEYx2zCrdZJyIU9BQ.woff2",
-    "800": "https://fonts.gstatic.com/s/abhayalibre/v14/e3t5euGtX-Co5MNzeAOqinEY22_CrdZJyIU9BQ.woff2"
-  },
-  "Aboreto": {
-    "400": "https://fonts.gstatic.com/s/aboreto/v2/5DCXAKLhwDDQ4N8bpKPUAk6t1Sc.woff2"
-  },
-  "Abril Fatface": {
-    "400": "https://fonts.gstatic.com/s/abrilfatface/v19/zOL64pLDlL1D99S8g8PtiKchq-dmjcDidBc.woff2"
-  }
+  ...fontData
 };
 
 export const getFontVariants = (font: string): FontVariant[] => {

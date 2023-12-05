@@ -1,42 +1,116 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.main{
+  width: 100%;
+  height: 100dvh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+textarea {
+  width: 100%;
+  height: 150px; 
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333;
+  resize: vertical; 
+
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: normal;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea[style*="italic"] {
+  font-style: italic;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.selectorWrapper{
+  width: 100%;
 }
 
-.card {
-  padding: 2em;
+.save_reset_wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
 }
 
-.read-the-docs {
-  color: #888;
+.font_wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.font_family_selector, .font_weight_selector {
+  background-color: #1a1a1a;
+  color: #F8D798;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  
+}
+
+.font_family_selector label,.font_weight_selector label, .italic_selector label {
+  margin-right: 10px; 
+}
+
+.font_family_selector select,.font_weight_selector select {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+
+}
+
+.italic_selector {
+  background-color: #1a1a1a;
+  color: #F8D798;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px; 
+  display: flex;
+  align-items: center; 
+
+}
+
+.italic_selector input {
+  margin-right: 5px; 
+  cursor: pointer;
+}
+
+
+.italic_selector input[type="checkbox"] {
+  cursor: pointer;
+  appearance: none; 
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  position: relative;
+
+}
+
+.italic_selector input[type="checkbox"]:checked::before {
+  content: '\2713'; 
+  font-size: 14px;
+  color: #F8D798;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.italic_selector input[type="checkbox"]:checked {
+  background-color: #1a1a1a;
+  border-color: #F8D798;
+  color: #F8D798;
 }
